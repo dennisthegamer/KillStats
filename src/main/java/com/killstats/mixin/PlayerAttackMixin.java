@@ -1,6 +1,5 @@
 package com.killstats.mixin;
 
-import com.killstats.config.ModConfig;
 import com.killstats.tracker.KillSession;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
