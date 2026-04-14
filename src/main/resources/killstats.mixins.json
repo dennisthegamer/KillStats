@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.killstats.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"LivingEntityDeathMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
