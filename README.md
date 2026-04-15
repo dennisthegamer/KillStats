@@ -1,6 +1,6 @@
 # KillStats
 
-A Minecraft Fabric mod that tracks your entity kills during gameplay sessions, estimates drop values in Emeralds, and displays live statistics via a configurable in-game HUD overlay.
+A Minecraft Fabric mod that tracks your entity kills during gameplay sessions and displays live statistics via a configurable in-game HUD overlay.
 
 ## Features
 
