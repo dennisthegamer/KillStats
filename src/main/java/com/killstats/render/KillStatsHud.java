@@ -6,17 +6,23 @@ import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class KillStatsHud {
 
     private static boolean compactMode = false;
+    private static final Map<EntityType<?>, LivingEntity> entityCache = new HashMap<>();
 
     public static void toggleCompactMode() {
         compactMode = !compactMode;
@@ -157,8 +163,8 @@ public class KillStatsHud {
         for (KillSession.MobKillData data : killData.values()) {
             if (data.totalKills <= 0) continue;
 
-            // Draw mob drop icon
-            graphics.item(getDropIcon(data.entityType), x + padding, currentY - 4);
+            // Draw mob head
+            renderMobHead(graphics, data.entityType, client, x + padding, currentY - 4);
 
             // Mob name (left-aligned after icon)
             int textOffsetX = 16 + 4; // icon width + gap
@@ -183,41 +189,54 @@ public class KillStatsHud {
         graphics.text(font, timeText, x + padding, currentY, 0xFFAAAAAA, true);
     }
 
-    /**
-     * Get an item icon representing the mob's primary drop.
-     */
-    private static ItemStack getDropIcon(EntityType<?> entityType) {
-        if (entityType == EntityType.ZOMBIE) return new ItemStack(Items.ROTTEN_FLESH);
-        if (entityType == EntityType.SKELETON) return new ItemStack(Items.BONE);
-        if (entityType == EntityType.CREEPER) return new ItemStack(Items.GUNPOWDER);
-        if (entityType == EntityType.SPIDER) return new ItemStack(Items.STRING);
-        if (entityType == EntityType.WITCH) return new ItemStack(Items.GLASS_BOTTLE);
-        if (entityType == EntityType.BLAZE) return new ItemStack(Items.BLAZE_ROD);
-        if (entityType == EntityType.ENDERMAN) return new ItemStack(Items.ENDER_PEARL);
-        if (entityType == EntityType.PHANTOM) return new ItemStack(Items.PHANTOM_MEMBRANE);
-        if (entityType == EntityType.COW) return new ItemStack(Items.LEATHER);
-        if (entityType == EntityType.SHEEP) return new ItemStack(Items.WHITE_WOOL);
-        if (entityType == EntityType.PIG) return new ItemStack(Items.PORKCHOP);
-        if (entityType == EntityType.CHICKEN) return new ItemStack(Items.FEATHER);
-        if (entityType == EntityType.GHAST) return new ItemStack(Items.GHAST_TEAR);
-        if (entityType == EntityType.WITHER_SKELETON) return new ItemStack(Items.WITHER_SKELETON_SKULL);
-        if (entityType == EntityType.HOGLIN) return new ItemStack(Items.PORKCHOP);
-        if (entityType == EntityType.PIGLIN) return new ItemStack(Items.GOLD_INGOT);
-        if (entityType == EntityType.SHULKER) return new ItemStack(Items.SHULKER_SHELL);
-        if (entityType == EntityType.GUARDIAN) return new ItemStack(Items.PRISMARINE_SHARD);
-        if (entityType == EntityType.ELDER_GUARDIAN) return new ItemStack(Items.SPONGE);
-        if (entityType == EntityType.WITHER) return new ItemStack(Items.NETHER_STAR);
-        if (entityType == EntityType.ENDER_DRAGON) return new ItemStack(Items.DRAGON_HEAD);
-        if (entityType == EntityType.EVOKER) return new ItemStack(Items.TOTEM_OF_UNDYING);
-        if (entityType == EntityType.SLIME) return new ItemStack(Items.SLIME_BALL);
-        if (entityType == EntityType.MAGMA_CUBE) return new ItemStack(Items.MAGMA_CREAM);
-        if (entityType == EntityType.DROWNED) return new ItemStack(Items.ROTTEN_FLESH);
-        if (entityType == EntityType.RABBIT) return new ItemStack(Items.RABBIT_HIDE);
-        if (entityType == EntityType.SQUID) return new ItemStack(Items.INK_SAC);
-        if (entityType == EntityType.GLOW_SQUID) return new ItemStack(Items.GLOW_INK_SAC);
-        if (entityType == EntityType.VINDICATOR) return new ItemStack(Items.EMERALD);
-        if (entityType == EntityType.PILLAGER) return new ItemStack(Items.CROSSBOW);
-        // Default: iron sword icon
-        return new ItemStack(Items.IRON_SWORD);
+    private static LivingEntity getOrCreateEntity(EntityType<?> type, Minecraft client) {
+        if (client.level == null) return null;
+        LivingEntity cached = entityCache.get(type);
+        if (cached != null) return cached;
+
+        Entity entity = type.create(client.level, EntitySpawnReason.LOAD);
+        if (entity instanceof LivingEntity living) {
+            entityCache.put(type, living);
+            return living;
+        }
+        return null;
+    }
+
+    private static void renderMobHead(GuiGraphicsExtractor graphics, EntityType<?> entityType, Minecraft client, int x, int y) {
+        LivingEntity entity = getOrCreateEntity(entityType, client);
+        if (entity != null) {
+            // Reset entity rotation so head faces forward
+            entity.setYRot(0);
+            entity.yRotO = 0;
+            entity.setXRot(0);
+            entity.xRotO = 0;
+            entity.yHeadRot = 0;
+            entity.yHeadRotO = 0;
+            entity.yBodyRot = 0;
+            entity.yBodyRotO = 0;
+
+            // Scale depends on entity height to fit head into 16x16 area
+            float entityHeight = entity.getBbHeight();
+            int scale = (int) (8 / entityHeight);
+            if (scale < 2) scale = 2;
+            if (scale > 8) scale = 8;
+
+            // Render entity in a 16x16 box, offset so only head is visible
+            float yOffset = entityHeight * 0.35f;
+            InventoryScreen.extractEntityInInventoryFollowsMouse(
+                    graphics,
+                    x, y, x + 16, y + 16,
+                    scale, yOffset,
+                    0, 0,
+                    entity
+            );
+        } else {
+            // Fallback for non-living entities
+            graphics.item(new ItemStack(Items.IRON_SWORD), x, y);
+        }
+    }
+
+    public static void clearEntityCache() {
+        entityCache.clear();
     }
 }

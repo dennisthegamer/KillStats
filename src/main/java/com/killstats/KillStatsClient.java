@@ -124,6 +124,7 @@ public class KillStatsClient implements ClientModInitializer {
                 }
                 session.reset();
                 KillEventHandler.invalidateCache();
+                KillStatsHud.clearEntityCache();
                 LOGGER.info("Session ended");
             }
 
