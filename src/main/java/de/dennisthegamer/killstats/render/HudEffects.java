@@ -1,4 +1,4 @@
-package com.killstats.render;
+package de.dennisthegamer.killstats.render;
 
 public class HudEffects {
 

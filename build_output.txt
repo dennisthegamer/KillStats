@@ -1,0 +1,484 @@
+
+> Configure project :
+Fabric Loom: 1.17.11
+
+> Task :clean
+
+> Task :compileJava FAILED
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\KillStatsClient.java:134: Fehler: Symbol nicht gefunden
+                boolean screenOpen = client.screen != null;
+                                           ^
+  Symbol: Variable screen
+  Ort: Variable client von Typ Minecraft
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\render\KillStatsHud.java:34: Fehler: Symbol nicht gefunden
+        if (client.player == null || client.options.hideGui) return;
+                                                   ^
+  Symbol: Variable hideGui
+  Ort: Variable options von Typ Options
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:16: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ZOMBIE, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable ZOMBIE
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:17: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SKELETON, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable SKELETON
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:18: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.CREEPER, new double[]{0.5, 0.2});
+                                 ^
+  Symbol: Variable CREEPER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:19: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SPIDER, new double[]{0.2, 0.05});
+                                 ^
+  Symbol: Variable SPIDER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:20: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.WITCH, new double[]{1.5, 0.3});
+                                 ^
+  Symbol: Variable WITCH
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:21: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.BLAZE, new double[]{1.0, 0.5});
+                                 ^
+  Symbol: Variable BLAZE
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:22: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ENDERMAN, new double[]{0.2, 0.1});
+                                 ^
+  Symbol: Variable ENDERMAN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:23: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.PHANTOM, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable PHANTOM
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:24: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.DROWNED, new double[]{0.2, 0.05});
+                                 ^
+  Symbol: Variable DROWNED
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:25: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.HUSK, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable HUSK
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:26: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.STRAY, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable STRAY
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:27: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.CAVE_SPIDER, new double[]{0.2, 0.05});
+                                 ^
+  Symbol: Variable CAVE_SPIDER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:28: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SILVERFISH, new double[]{0.0, 0.0});
+                                 ^
+  Symbol: Variable SILVERFISH
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:29: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SLIME, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable SLIME
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:30: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.MAGMA_CUBE, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable MAGMA_CUBE
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:31: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.GUARDIAN, new double[]{0.5, 0.2});
+                                 ^
+  Symbol: Variable GUARDIAN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:32: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.VINDICATOR, new double[]{0.5, 0.2});
+                                 ^
+  Symbol: Variable VINDICATOR
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:33: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.PILLAGER, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable PILLAGER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:34: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.RAVAGER, new double[]{1.0, 0.3});
+                                 ^
+  Symbol: Variable RAVAGER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:35: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.EVOKER, new double[]{2.0, 0.5});
+                                 ^
+  Symbol: Variable EVOKER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:36: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.VEX, new double[]{0.0, 0.0});
+                                 ^
+  Symbol: Variable VEX
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:37: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ZOMBIE_VILLAGER, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable ZOMBIE_VILLAGER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:40: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.COW, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable COW
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:41: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SHEEP, new double[]{0.2, 0.05});
+                                 ^
+  Symbol: Variable SHEEP
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:42: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.PIG, new double[]{0.2, 0.05});
+                                 ^
+  Symbol: Variable PIG
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:43: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.CHICKEN, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable CHICKEN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:44: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.RABBIT, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable RABBIT
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:45: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SQUID, new double[]{0.1, 0.05});
+                                 ^
+  Symbol: Variable SQUID
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:46: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.GLOW_SQUID, new double[]{0.2, 0.1});
+                                 ^
+  Symbol: Variable GLOW_SQUID
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:47: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.MOOSHROOM, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable MOOSHROOM
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:50: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.PIGLIN, new double[]{0.3, 0.1});
+                                 ^
+  Symbol: Variable PIGLIN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:51: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.HOGLIN, new double[]{0.5, 0.2});
+                                 ^
+  Symbol: Variable HOGLIN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:52: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.GHAST, new double[]{0.8, 0.3});
+                                 ^
+  Symbol: Variable GHAST
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:53: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.WITHER_SKELETON, new double[]{2.0, 1.0});
+                                 ^
+  Symbol: Variable WITHER_SKELETON
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:54: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.PIGLIN_BRUTE, new double[]{0.5, 0.2});
+                                 ^
+  Symbol: Variable PIGLIN_BRUTE
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:55: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ZOMBIFIED_PIGLIN, new double[]{0.2, 0.1});
+                                 ^
+  Symbol: Variable ZOMBIFIED_PIGLIN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:58: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.SHULKER, new double[]{1.5, 0.5});
+                                 ^
+  Symbol: Variable SHULKER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:59: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ENDERMITE, new double[]{0.0, 0.0});
+                                 ^
+  Symbol: Variable ENDERMITE
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:62: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.WITHER, new double[]{20.0, 0.0});
+                                 ^
+  Symbol: Variable WITHER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:63: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ELDER_GUARDIAN, new double[]{5.0, 0.5});
+                                 ^
+  Symbol: Variable ELDER_GUARDIAN
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:64: Fehler: Symbol nicht gefunden
+        MOB_VALUES.put(EntityType.ENDER_DRAGON, new double[]{50.0, 0.0});
+                                 ^
+  Symbol: Variable ENDER_DRAGON
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:85: Fehler: Symbol nicht gefunden
+        return entityType == EntityType.WITHER
+                                       ^
+  Symbol: Variable WITHER
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:86: Fehler: Symbol nicht gefunden
+                || entityType == EntityType.ENDER_DRAGON
+                                           ^
+  Symbol: Variable ENDER_DRAGON
+  Ort: Klasse EntityType
+C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:87: Fehler: Symbol nicht gefunden
+                || entityType == EntityType.ELDER_GUARDIAN;
+                                           ^
+  Symbol: Variable ELDER_GUARDIAN
+  Ort: Klasse EntityType
+46 Fehler
+
+[Incubating] Problems report is available at: file:///C:/Users/mager/Documents/Minecraft%20-%20Mods/KillStats/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\KillStatsClient.java:134: Fehler: Symbol nicht gefunden
+                  boolean screenOpen = client.screen != null;
+                                             ^
+    Symbol: Variable screen
+    Ort: Variable client von Typ Minecraft
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\render\KillStatsHud.java:34: Fehler: Symbol nicht gefunden
+          if (client.player == null || client.options.hideGui) return;
+                                                     ^
+    Symbol: Variable hideGui
+    Ort: Variable options von Typ Options
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:16: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ZOMBIE, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable ZOMBIE
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:17: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SKELETON, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable SKELETON
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:18: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.CREEPER, new double[]{0.5, 0.2});
+                                   ^
+    Symbol: Variable CREEPER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:19: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SPIDER, new double[]{0.2, 0.05});
+                                   ^
+    Symbol: Variable SPIDER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:20: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.WITCH, new double[]{1.5, 0.3});
+                                   ^
+    Symbol: Variable WITCH
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:21: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.BLAZE, new double[]{1.0, 0.5});
+                                   ^
+    Symbol: Variable BLAZE
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:22: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ENDERMAN, new double[]{0.2, 0.1});
+                                   ^
+    Symbol: Variable ENDERMAN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:23: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.PHANTOM, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable PHANTOM
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:24: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.DROWNED, new double[]{0.2, 0.05});
+                                   ^
+    Symbol: Variable DROWNED
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:25: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.HUSK, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable HUSK
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:26: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.STRAY, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable STRAY
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:27: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.CAVE_SPIDER, new double[]{0.2, 0.05});
+                                   ^
+    Symbol: Variable CAVE_SPIDER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:28: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SILVERFISH, new double[]{0.0, 0.0});
+                                   ^
+    Symbol: Variable SILVERFISH
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:29: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SLIME, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable SLIME
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:30: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.MAGMA_CUBE, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable MAGMA_CUBE
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:31: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.GUARDIAN, new double[]{0.5, 0.2});
+                                   ^
+    Symbol: Variable GUARDIAN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:32: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.VINDICATOR, new double[]{0.5, 0.2});
+                                   ^
+    Symbol: Variable VINDICATOR
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:33: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.PILLAGER, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable PILLAGER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:34: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.RAVAGER, new double[]{1.0, 0.3});
+                                   ^
+    Symbol: Variable RAVAGER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:35: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.EVOKER, new double[]{2.0, 0.5});
+                                   ^
+    Symbol: Variable EVOKER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:36: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.VEX, new double[]{0.0, 0.0});
+                                   ^
+    Symbol: Variable VEX
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:37: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ZOMBIE_VILLAGER, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable ZOMBIE_VILLAGER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:40: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.COW, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable COW
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:41: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SHEEP, new double[]{0.2, 0.05});
+                                   ^
+    Symbol: Variable SHEEP
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:42: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.PIG, new double[]{0.2, 0.05});
+                                   ^
+    Symbol: Variable PIG
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:43: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.CHICKEN, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable CHICKEN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:44: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.RABBIT, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable RABBIT
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:45: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SQUID, new double[]{0.1, 0.05});
+                                   ^
+    Symbol: Variable SQUID
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:46: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.GLOW_SQUID, new double[]{0.2, 0.1});
+                                   ^
+    Symbol: Variable GLOW_SQUID
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:47: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.MOOSHROOM, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable MOOSHROOM
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:50: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.PIGLIN, new double[]{0.3, 0.1});
+                                   ^
+    Symbol: Variable PIGLIN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:51: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.HOGLIN, new double[]{0.5, 0.2});
+                                   ^
+    Symbol: Variable HOGLIN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:52: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.GHAST, new double[]{0.8, 0.3});
+                                   ^
+    Symbol: Variable GHAST
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:53: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.WITHER_SKELETON, new double[]{2.0, 1.0});
+                                   ^
+    Symbol: Variable WITHER_SKELETON
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:54: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.PIGLIN_BRUTE, new double[]{0.5, 0.2});
+                                   ^
+    Symbol: Variable PIGLIN_BRUTE
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:55: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ZOMBIFIED_PIGLIN, new double[]{0.2, 0.1});
+                                   ^
+    Symbol: Variable ZOMBIFIED_PIGLIN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:58: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.SHULKER, new double[]{1.5, 0.5});
+                                   ^
+    Symbol: Variable SHULKER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:59: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ENDERMITE, new double[]{0.0, 0.0});
+                                   ^
+    Symbol: Variable ENDERMITE
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:62: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.WITHER, new double[]{20.0, 0.0});
+                                   ^
+    Symbol: Variable WITHER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:63: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ELDER_GUARDIAN, new double[]{5.0, 0.5});
+                                   ^
+    Symbol: Variable ELDER_GUARDIAN
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:64: Fehler: Symbol nicht gefunden
+          MOB_VALUES.put(EntityType.ENDER_DRAGON, new double[]{50.0, 0.0});
+                                   ^
+    Symbol: Variable ENDER_DRAGON
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:85: Fehler: Symbol nicht gefunden
+          return entityType == EntityType.WITHER
+                                         ^
+    Symbol: Variable WITHER
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:86: Fehler: Symbol nicht gefunden
+                  || entityType == EntityType.ENDER_DRAGON
+                                             ^
+    Symbol: Variable ENDER_DRAGON
+    Ort: Klasse EntityType
+  C:\Users\mager\Documents\Minecraft - Mods\KillStats\src\main\java\de\dennisthegamer\killstats\tracker\DropValueTable.java:87: Fehler: Symbol nicht gefunden
+                  || entityType == EntityType.ELDER_GUARDIAN;
+                                             ^
+    Symbol: Variable ELDER_GUARDIAN
+    Ort: Klasse EntityType
+  46 Fehler
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 1s
+2 actionable tasks: 2 executed

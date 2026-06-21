@@ -1,6 +1,6 @@
-package com.killstats.mixin;
+package de.dennisthegamer.killstats.mixin;
 
-import com.killstats.tracker.KillSession;
+import de.dennisthegamer.killstats.tracker.KillSession;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -17,7 +17,7 @@ public class PlayerAttackMixin {
         if (target instanceof LivingEntity && !target.level().isClientSide()) {
             KillSession session = KillSession.getInstance();
             if (session.isRunning()) {
-                session.recordFirstHit(target.getId());
+                session.recordFirstHit(target.getUUID());
             }
         }
     }

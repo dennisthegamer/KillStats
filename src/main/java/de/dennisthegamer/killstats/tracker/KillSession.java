@@ -1,9 +1,9 @@
-package com.killstats.tracker;
+package de.dennisthegamer.killstats.tracker;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.killstats.KillStatsClient;
+import de.dennisthegamer.killstats.KillStatsClient;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -14,16 +14,12 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.UUID;
 
-/**
- * Stores all session data: kill counts per mob type, looting level kills, drop values.
- * Purely in-memory, not persistent.
- */
 public class KillSession {
 
     private static final KillSession INSTANCE = new KillSession();
 
-    // EntityType key string -> MobKillData
     private final Map<String, MobKillData> killData = new LinkedHashMap<>();
     private long sessionStartTime;
     private long accumulatedMillis = 0;
@@ -32,8 +28,7 @@ public class KillSession {
     private double totalDropValue = 0.0;
     private int totalKills = 0;
 
-    // Combat tracking: entity ID -> first hit time (for average combat duration)
-    private final Map<Integer, Long> combatStartTimes = new LinkedHashMap<>();
+    private final Map<UUID, Long> combatStartTimes = new LinkedHashMap<>();
 
     private KillSession() {
         reset();
@@ -85,61 +80,40 @@ public class KillSession {
         return started && !paused;
     }
 
-    /**
-     * Record a kill.
-     *
-     * @param entityType   the entity type killed
-     * @param displayName  human-readable name
-     * @param lootingLevel looting enchantment level (0-3)
-     * @param dropValue    estimated drop value in emeralds
-     * @param entityId     the runtime entity ID for combat duration tracking
-     */
-    public void recordKill(EntityType<?> entityType, String displayName, int lootingLevel, double dropValue, int entityId) {
+    public void recordKill(EntityType<?> entityType, String displayName, int lootingLevel, double dropValue, UUID entityUuid) {
         String key = EntityType.getKey(entityType).toString();
         MobKillData data = killData.computeIfAbsent(key, _ -> new MobKillData(entityType, displayName));
 
         data.totalKills++;
         totalKills++;
 
-        // Track looting kills
         if (lootingLevel >= 1 && lootingLevel <= 3) {
             data.lootingKills[lootingLevel - 1]++;
         }
 
-        // Calculate combat duration
-        Long combatStart = combatStartTimes.remove(entityId);
+        Long combatStart = combatStartTimes.remove(entityUuid);
         if (combatStart != null) {
             double durationSeconds = (System.currentTimeMillis() - combatStart) / 1000.0;
             data.totalCombatDuration += durationSeconds;
             data.combatEncounters++;
         }
 
-        // Add drop value
         data.totalDropValue += dropValue;
         totalDropValue += dropValue;
     }
 
-    /**
-     * Record the first hit on an entity (for combat duration tracking).
-     */
-    public void recordFirstHit(int entityId) {
-        combatStartTimes.putIfAbsent(entityId, System.currentTimeMillis());
+    public void recordFirstHit(UUID entityUuid) {
+        combatStartTimes.putIfAbsent(entityUuid, System.currentTimeMillis());
     }
 
     public int getTotalKills() {
         return totalKills;
     }
 
-    /**
-     * Get all mob kill data entries (only mobs with kills > 0).
-     */
     public Map<String, MobKillData> getKillData() {
         return killData;
     }
 
-    /**
-     * Get kill count for a specific entity type.
-     */
     public int getKillCount(EntityType<?> entityType) {
         String key = EntityType.getKey(entityType).toString();
         MobKillData data = killData.get(key);
@@ -173,7 +147,6 @@ public class KillSession {
         try {
             Map<String, Object> root = new HashMap<>();
 
-            // Save per-mob kill data
             Map<String, Map<String, Object>> mobData = new LinkedHashMap<>();
             for (Map.Entry<String, MobKillData> entry : killData.entrySet()) {
                 MobKillData data = entry.getValue();
@@ -216,7 +189,6 @@ public class KillSession {
             Map<String, Object> root = GSON.fromJson(reader, type);
             if (root == null) return false;
 
-            // Restore duration (session starts paused)
             Number savedDuration = (Number) root.get("durationMillis");
             if (savedDuration != null) {
                 accumulatedMillis = savedDuration.longValue();
@@ -224,26 +196,23 @@ public class KillSession {
             paused = true;
             started = true;
 
-            // Restore per-mob data
             Map<String, Map<String, Object>> mobData = (Map<String, Map<String, Object>>) root.get("killData");
             if (mobData != null) {
                 for (Map.Entry<String, Map<String, Object>> entry : mobData.entrySet()) {
                     String entityKey = entry.getKey();
                     Map<String, Object> mob = entry.getValue();
 
-                    // Resolve EntityType from key
                     EntityType<?> entityType;
                     try {
                         entityType = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(entityKey));
                     } catch (Exception e) {
-                        continue; // skip unknown entity types
+                        continue;
                     }
 
                     String displayName = (String) mob.getOrDefault("displayName", entityKey);
                     MobKillData data = new MobKillData(entityType, displayName);
                     data.totalKills = ((Number) mob.getOrDefault("totalKills", 0)).intValue();
 
-                    // Restore looting kills
                     Object lootingObj = mob.get("lootingKills");
                     if (lootingObj instanceof java.util.List<?> list) {
                         for (int i = 0; i < Math.min(3, list.size()); i++) {
@@ -259,7 +228,6 @@ public class KillSession {
                 }
             }
 
-            // Restore totals
             Number savedTotalKills = (Number) root.get("totalKills");
             if (savedTotalKills != null) {
                 totalKills = savedTotalKills.intValue();
@@ -284,14 +252,11 @@ public class KillSession {
         }
     }
 
-    /**
-     * Data class for per-mob-type kill statistics.
-     */
     public static class MobKillData {
         public final EntityType<?> entityType;
         public final String displayName;
         public int totalKills = 0;
-        public int[] lootingKills = new int[3]; // index 0=Looting I, 1=II, 2=III
+        public int[] lootingKills = new int[3];
         public double totalCombatDuration = 0.0;
         public int combatEncounters = 0;
         public double totalDropValue = 0.0;

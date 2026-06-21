@@ -27,7 +27,7 @@ repositories {
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	// MC 26.1 is unobfuscated - no mappings needed with fabric-loom plugin
+	// MC 26.2 is unobfuscated - no mappings needed with fabric-loom plugin
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API

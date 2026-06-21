@@ -1,6 +1,6 @@
-package com.killstats.render;
+package de.dennisthegamer.killstats.render;
 
-import com.killstats.config.ModConfig;
+import de.dennisthegamer.killstats.config.ModConfig;
 
 public class HudLayout {
 

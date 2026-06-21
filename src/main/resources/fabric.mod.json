@@ -5,7 +5,7 @@
 	"name": "KillStats",
 	"description": "Tracks mob kills per session, estimates drop value in Emeralds, and displays live stats in a configurable HUD overlay.",
 	"authors": [
-		"DennisTheGamer"
+		"Dennis_thegamer"
 	],
 	"contact": {},
 	"license": "MIT",
@@ -13,23 +13,23 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"com.killstats.KillStatsClient"
+			"de.dennisthegamer.killstats.KillStatsClient"
 		],
 		"modmenu": [
-			"com.killstats.config.ModMenuIntegration"
+			"de.dennisthegamer.killstats.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
 		"killstats.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": ">=26.1",
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.2-",
 		"java": ">=25",
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"modmenu": ">=18.0.0-alpha.8",
-		"yet_another_config_lib": ">=3.9.2"
+		"modmenu": ">=20.0.0-beta.3",
+		"yet_another_config_lib": ">=3.9.4"
 	}
 }

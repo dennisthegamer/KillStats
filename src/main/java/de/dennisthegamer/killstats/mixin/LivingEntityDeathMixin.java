@@ -1,6 +1,6 @@
-package com.killstats.mixin;
+package de.dennisthegamer.killstats.mixin;
 
-import com.killstats.event.KillEventHandler;
+import de.dennisthegamer.killstats.event.KillEventHandler;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +14,6 @@ public class LivingEntityDeathMixin {
     @Inject(method = "die", at = @At("HEAD"))
     private void onDeath(DamageSource damageSource, CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
-        // Process on server side (where die() is actually called)
         if (!self.level().isClientSide()) {
             KillEventHandler.onEntityDeath(self, damageSource);
         }
