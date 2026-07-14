@@ -5,6 +5,13 @@ All notable changes to KillStats will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-07-14
+
+### Changed
+- Unified the version number across all supported Minecraft versions so every build carries one release version
+- Standardized release jar naming to `killstats-fabric-<version>+mc<range>` (e.g. `killstats-fabric-1.1.0+mc26.1-26.1.2.jar`)
+- Corrected author and contact metadata (Modrinth and GitHub links)
+
 ## [1.0.0] - 2026-04-14
 
 ### Added
