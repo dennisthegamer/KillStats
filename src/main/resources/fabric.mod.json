@@ -5,9 +5,12 @@
 	"name": "KillStats",
 	"description": "Tracks mob kills per session, estimates drop value in Emeralds, and displays live stats in a configurable HUD overlay.",
 	"authors": [
-		"DennisTheGamer"
+		"Dennis_thegamer"
 	],
-	"contact": {},
+	"contact": {
+		"homepage": "https://modrinth.com/mod/killstats",
+		"issues": "https://github.com/DennisTheGamer/KillStats/issues"
+	},
 	"license": "MIT",
 	"icon": "assets/killstats/icon.png",
 	"environment": "client",
