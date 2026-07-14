@@ -18,7 +18,7 @@ A Minecraft Fabric mod that tracks your entity kills during gameplay sessions an
 
 ## Compatibility
 
-- **Minecraft**: 26.1+
+- **Minecraft**: 26.2
 - **Fabric Loader**: 0.18.4+
 - **Fabric API**: Required
 - **Java**: 25+
@@ -27,7 +27,7 @@ A Minecraft Fabric mod that tracks your entity kills during gameplay sessions an
 
 ## Download
 
-Download the latest release from [Modrinth](https://modrinth.com/mod/killstats) or [GitHub Releases](https://github.com/DennisTheGamer/killstats/releases).
+Download the latest release from [Modrinth](https://modrinth.com/mod/killstats) or [GitHub Releases](https://github.com/DennisTheGamer/KillStats/releases).
 
 ## Installation
 
@@ -55,8 +55,8 @@ Config file is saved at `config/killstats.json5`.
 ## Building from Source
 
 ```bash
-git clone https://github.com/DennisTheGamer/killstats.git
-cd killstats
+git clone https://github.com/DennisTheGamer/KillStats.git
+cd KillStats
 ./gradlew build
 ```
 
@@ -68,10 +68,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits
 
-- **Author**: DennisTheGamer
+- **Author**: Dennis_thegamer
 - **Built with**: Fabric, Fabric API, YACL
 
 ## Support
 
-- Report bugs on [GitHub Issues](https://github.com/DennisTheGamer/killstats/issues)
+- Report bugs on [GitHub Issues](https://github.com/DennisTheGamer/KillStats/issues)
 - Visit the [Modrinth page](https://modrinth.com/mod/killstats) for more information
