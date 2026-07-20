@@ -1,4 +1,4 @@
-package com.killstats.tracker;
+package de.dennisthegamer.killstats.tracker;
 
 import net.minecraft.world.entity.EntityType;
 

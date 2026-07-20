@@ -1,7 +1,7 @@
-package com.killstats.render;
+package de.dennisthegamer.killstats.render;
 
-import com.killstats.config.ModConfig;
-import com.killstats.tracker.KillSession;
+import de.dennisthegamer.killstats.config.ModConfig;
+import de.dennisthegamer.killstats.tracker.KillSession;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;

@@ -1,10 +1,10 @@
-package com.killstats;
+package de.dennisthegamer.killstats;
 
-import com.killstats.config.ModConfig;
-import com.killstats.event.KillEventHandler;
-import com.killstats.render.HudEffects;
-import com.killstats.render.KillStatsHud;
-import com.killstats.tracker.KillSession;
+import de.dennisthegamer.killstats.config.ModConfig;
+import de.dennisthegamer.killstats.event.KillEventHandler;
+import de.dennisthegamer.killstats.render.HudEffects;
+import de.dennisthegamer.killstats.render.KillStatsHud;
+import de.dennisthegamer.killstats.tracker.KillSession;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;

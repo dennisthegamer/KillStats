@@ -1,9 +1,9 @@
-package com.killstats.tracker;
+package de.dennisthegamer.killstats.tracker;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.killstats.KillStatsClient;
+import de.dennisthegamer.killstats.KillStatsClient;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;

@@ -1,4 +1,4 @@
-package com.killstats.config;
+package de.dennisthegamer.killstats.config;
 
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;

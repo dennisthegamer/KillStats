@@ -1,10 +1,10 @@
-package com.killstats.event;
+package de.dennisthegamer.killstats.event;
 
-import com.killstats.KillStatsClient;
-import com.killstats.config.ModConfig;
-import com.killstats.render.HudEffects;
-import com.killstats.tracker.DropValueTable;
-import com.killstats.tracker.KillSession;
+import de.dennisthegamer.killstats.KillStatsClient;
+import de.dennisthegamer.killstats.config.ModConfig;
+import de.dennisthegamer.killstats.render.HudEffects;
+import de.dennisthegamer.killstats.tracker.DropValueTable;
+import de.dennisthegamer.killstats.tracker.KillSession;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.Holder;

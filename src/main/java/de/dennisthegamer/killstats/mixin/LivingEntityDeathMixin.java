@@ -1,6 +1,6 @@
-package com.killstats.mixin;
+package de.dennisthegamer.killstats.mixin;
 
-import com.killstats.event.KillEventHandler;
+import de.dennisthegamer.killstats.event.KillEventHandler;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

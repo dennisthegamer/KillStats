@@ -1,4 +1,4 @@
-package com.killstats.config;
+package de.dennisthegamer.killstats.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

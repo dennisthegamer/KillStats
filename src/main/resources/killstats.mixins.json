@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "com.killstats.mixin",
+	"package": "de.dennisthegamer.killstats.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"LivingEntityDeathMixin",

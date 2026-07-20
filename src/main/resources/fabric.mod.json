@@ -16,10 +16,10 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"com.killstats.KillStatsClient"
+			"de.dennisthegamer.killstats.KillStatsClient"
 		],
 		"modmenu": [
-			"com.killstats.config.ModMenuIntegration"
+			"de.dennisthegamer.killstats.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
