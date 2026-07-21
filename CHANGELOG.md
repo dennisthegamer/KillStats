@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Corrected author and contact metadata (Modrinth and GitHub links)
 
 ## [1.0.1] - 2026-06-21
-- **Support for Minecraft 26.2** — Updated mappings and dependencies for the latest Minecraft version. No functional changes.
+- **Support for Minecraft 26.2** — Updated mappings and dependencies for the latest Minecraft version.
 - **YACL** Change config library from cloth-config to yet another config lib.
 
 
