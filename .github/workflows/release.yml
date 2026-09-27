@@ -9,7 +9,7 @@ name: Release
 on:
   push:
     branches:
-      - mc26.2
+      - mc26.3
 
 jobs:
   build:
