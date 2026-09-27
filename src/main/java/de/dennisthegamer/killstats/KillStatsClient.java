@@ -15,7 +15,6 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,22 +47,22 @@ public class KillStatsClient implements ClientModInitializer {
         // Register keybinds
         compactKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.killstats.compact",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_J,
+                InputConstants.Type.KEYBOARD,
+                InputConstants.KEY_J,
                 CATEGORY
         ));
 
         resetKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.killstats.reset",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_L,
+                InputConstants.Type.KEYBOARD,
+                InputConstants.KEY_L,
                 CATEGORY
         ));
 
         toggleTimerKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.killstats.toggle_timer",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_K,
+                InputConstants.Type.KEYBOARD,
+                InputConstants.KEY_K,
                 CATEGORY
         ));
 
